@@ -1,4 +1,9 @@
-export default function RootLayout({ children }:any) {
+import "./output.css";
+
+interface RootLayout {
+  children: React.ReactNode;
+}
+export default function RootLayout({ children }:RootLayout) {
     return (
       <html lang="en">
         <head />
