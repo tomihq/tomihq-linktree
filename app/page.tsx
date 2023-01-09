@@ -3,6 +3,7 @@ import Image from "next/image";
 import { get } from '@vercel/edge-config';
 import physicData from '../data.json';
 
+export const dynamic = 'force-dynamic', runtime = 'edge';
 
 function LinkCard({href, title, image}: {href: string, title: string; image?:string}){
     return(
@@ -63,12 +64,7 @@ const GitHub = () =>{
 }
 export default async function HomePage() {
     let data:Data | undefined = await get('linktree'); 
-
-    if(!data){
-        data = physicData;
-    }
-    
- 
+    if(!data) data = physicData;
     return (
         <div className="flex flex-col items-center justify-center mx-auto w-full mt-16 px-8 max-w-2xl">
             <Image
