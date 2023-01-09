@@ -41,24 +41,27 @@ export default function Page() {
                 src={data.avatar}
                 width={96}
                 height={96}
+                priority={true}
             />
-            <h1 className="font-bold mt-4 mb-8 text-xl text-gray-800 ">{data.name}</h1>
+            <h1 className="font-bold mt-4 mb-8 text-xl text-gray-900 ">{data.name}</h1>
             {
                 data.links.map((link) =>{
                     return <LinkCard key={link.href} {...link}/>
                 })
             }
-            <section className="flex flex-row gap-4 items-center mt-8 text-gray-700">
+            <section className="flex ">
+                <ul className="flex flex-row gap-4 items-center mt-8 text-gray-700">
                 {
                     data.socials.map((link)=>{
                         if(link.href.includes('github')){
-                            return <GitHub className="text-3xl cursor-pointer hover:scale-125 transition-all"/>
+                            return <GitHub key={link.href} className="text-3xl cursor-pointer hover:scale-125 transition-all"/>
                         }
                         if(link.href.includes('twitter')){
-                            return <TwitterIcon className="text-3xl cursor-pointer hover:scale-125 transition-all"/>
+                            return <TwitterIcon  key={link.href} className="text-3xl cursor-pointer hover:scale-125 transition-all"/>
                         }
                     })
                 }
+                </ul>
             </section>
         </div>
     )
