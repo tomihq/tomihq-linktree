@@ -64,7 +64,6 @@ const GitHub = () =>{
 }
 export default async function HomePage() {
     let data:Data | undefined = await get('linktree'); 
-    console.log(data)
     if(!data) data = physicData;
     return (
         <div className="flex flex-col items-center justify-center mx-auto w-full mt-16 px-8 max-w-2xl">
