@@ -5,6 +5,7 @@ export default function Head({title = 'LinkTreeClone'}) {
       <>
         <title> {title} - tomihq</title>  
         <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <meta name="description" content="Next.js + Tailwind CSS" />
         <link rel="icon" href="/favicon.ico" />
       </>
     );

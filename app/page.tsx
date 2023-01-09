@@ -1,5 +1,7 @@
-import { GitHub } from "@mui/icons-material";
+'use client';
 import Image from "next/image";
+import { GitHub } from "@mui/icons-material";
+import TwitterIcon from '@mui/icons-material/Twitter';
 import data from '../data.json';
 
 
@@ -32,7 +34,7 @@ function LinkCard({href, title, image}: {href: string, title: string; image?:str
 
 export default function Page() {
     return (
-        <div className="flex flex-col items-center justify-center mx-auto w-full mt-16 px-8 max-w-3xl">
+        <div className="flex flex-col items-center justify-center mx-auto w-full mt-16 px-8 max-w-2xl">
             <Image
                 className="rounded-full"
                 alt={data.name}
@@ -40,19 +42,24 @@ export default function Page() {
                 width={96}
                 height={96}
             />
-            <h1 className="font-bold mt-4 mb-8 text-xl ">{data.name}</h1>
+            <h1 className="font-bold mt-4 mb-8 text-xl text-gray-800 ">{data.name}</h1>
             {
                 data.links.map((link) =>{
                     return <LinkCard key={link.href} {...link}/>
                 })
             }
-            {
-                data.socials.map((link)=>{
-                    if(link.href.includes('github')){
-                        return <GitHub/>
-                    }
-                })
-            }
+            <section className="flex flex-row gap-4 items-center mt-8 text-gray-700">
+                {
+                    data.socials.map((link)=>{
+                        if(link.href.includes('github')){
+                            return <GitHub className="text-3xl cursor-pointer hover:scale-125 transition-all"/>
+                        }
+                        if(link.href.includes('twitter')){
+                            return <TwitterIcon className="text-3xl cursor-pointer hover:scale-125 transition-all"/>
+                        }
+                    })
+                }
+            </section>
         </div>
     )
   }
