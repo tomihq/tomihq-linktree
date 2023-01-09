@@ -5,7 +5,7 @@ interface RootLayout {
 }
 export default function RootLayout({ children }:RootLayout) {
     return (
-      <html lang="en">
+      <html lang="es">
         <head />
         <body>{children}</body>
       </html>
