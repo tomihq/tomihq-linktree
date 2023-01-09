@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { get } from '@vercel/edge-config';
 import physicData from '../data.json';
