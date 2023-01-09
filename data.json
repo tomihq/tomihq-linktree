@@ -1,0 +1,30 @@
+{
+    "name": "Tomás Hernández",
+    "avatar": "https://pbs.twimg.com/profile_images/1611959995007991810/9n3IQrQv_400x400.jpg",
+    "links": [
+        {
+            "title": "My Personal Site",
+            "href": "https://www.tomashernandez.tech/"
+        },
+        {
+            "title": "Portfolio",
+            "href": "https://tomihq-portfolio-v2.vercel.app/",
+            "image": "https://pbs.twimg.com/profile_images/1611959995007991810/9n3IQrQv_400x400.jpg"
+        },
+        {
+            "title": "NextJS",
+            "href": "https://vercel.com/solutions/nextjs"
+        }
+    ],
+    "socials": [
+        {
+            "title": "Twitter",
+            "href": "https://twitter.com/ttomihq"
+        },
+        {
+            "title": "GitHub",
+            "href": "https://github.com/tomihq"
+        }
+    ]
+
+}
